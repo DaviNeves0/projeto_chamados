@@ -33,7 +33,7 @@
     transform: scale(1.4);
 }
 
-.form-profile{
+.form-profile img{
     margin-bottom: 1em;
     border-radius: 50%;
     object-fit: cover;
