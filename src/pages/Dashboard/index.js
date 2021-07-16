@@ -9,7 +9,6 @@ import {Link} from 'react-router-dom'
 import {format} from 'date-fns';
 import { useState, useEffect } from 'react';
 import firebase from '../../services/firebaseConnection';
-import { doc } from 'prettier';
 
 const listRef = firebase.firestore().collection('chamados').orderBy('created', 'desc');
 
