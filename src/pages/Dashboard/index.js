@@ -11,7 +11,6 @@ import {format} from 'date-fns';
 import { useState, useEffect } from 'react';
 import firebase from '../../services/firebaseConnection';
 
-
 const listRef = firebase.firestore().collection('chamados').orderBy('created', 'desc');
 
 export default function Dashboard(){
