@@ -1,5 +1,5 @@
 
-import './dashboard.css';
+import './dashboard.css'
 import Header from '../../components/Header'
 import Title from '../../components/Title';
 import Modal from '../../components/Modal';
