@@ -21,7 +21,7 @@
 }
 
 .close{
-    background-color: #f65835;
+    background-color: #3b5cb8;
     color: white;
     border: 0;
     position: absolute;
@@ -35,8 +35,34 @@
 
 }
 
+.btn-thrash{
+    background-color: #f65835;
+    color: white;
+    border: 0;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 15px;
+    border-radius: 5px;
+    transition: ease-in 0.2s;
+
+}
+
+.btn-thrash:hover{
+    transform: scale(1.1);
+}
+
+.btn-thrash svg{
+    margin-right: 5px;
+}
+
 .close svg{
     margin-right: 5px;
+   
+
 }
 
 .modal h2{

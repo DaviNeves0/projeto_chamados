@@ -45,6 +45,18 @@ export default function Dashboard(){
        
     }, []);
 
+    async function handleDelete(){
+        await firebase.firestore().collection('chamados').doc(detail.id).delete()
+        .then(()=>{
+            alert('Sucesso ao excluir');
+            setShowPostModal(false);
+        })
+        .catch((err)=>{
+            alert('Não foi possível excluir');
+            console.log(err);
+        })
+        
+    }
 
     async function updateState(snapshot){
         const isCollectionEmpty = snapshot.size === 0;
@@ -88,6 +100,7 @@ export default function Dashboard(){
     function togglePostModal(item){
         setShowPostModal(!showPostModal); //troca True para False
         setDetail(item);
+      
     }
 
     if(loading){
@@ -174,6 +187,7 @@ export default function Dashboard(){
                 <Modal
                 conteudo = {detail}
                 close = {togglePostModal}
+                excluir = {handleDelete}
                 />
             )}
            

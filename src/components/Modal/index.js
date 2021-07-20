@@ -1,8 +1,11 @@
 import './modal.css'
 
-import {FiX} from 'react-icons/fi'
+import {FiX, FiTrash} from 'react-icons/fi'
 
-export default function Moldal({conteudo, close}){
+
+export default function Moldal({conteudo, close, excluir}){
+
+   
     return(
         <div className="modal">
             <div className="container">
@@ -10,6 +13,7 @@ export default function Moldal({conteudo, close}){
                     <FiX size={23} color="#FFF"/>
                     Voltar
                 </button>
+                
                 <div>
                   <h2>Detalhes do Chamado</h2>
                   <div className="row">
@@ -37,6 +41,11 @@ export default function Moldal({conteudo, close}){
                         <p>{conteudo.complemento}</p>
                       </>
                   )}
+
+                  <button className="btn-thrash" onClick={excluir}>
+                    <FiTrash size={25} color="#FFF"/>
+                    Excluir
+                  </button>
 
                 </div>
             </div>
